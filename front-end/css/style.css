@@ -1,0 +1,67 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    margin: auto;
+    height: auto;
+    top: 0;
+    position: sticky;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+.img-sizing{
+    height: 5rem;
+}
+
+.btn-sizing{
+    height: 5rem;
+    width: 8rem;
+}
+
+.bgc-element{
+    background-color: #F3E9F1;
+}
+
+.bgc-sizing{
+    height: 150px;
+    width: 100%;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#cameras{
+    height: 15rem;
+    width: 15rem;
+    border: 5px solid #F3E9F1;
+    margin-top: 5rem;
+}
+
+footer{
+    margin: auto;
+    height: auto;
+    bottom: 0;
+    position: sticky;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
