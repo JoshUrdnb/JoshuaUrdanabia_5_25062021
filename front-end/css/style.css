@@ -42,27 +42,17 @@ a{
 
 main{
     display: flex;
-    align-items: center;
     flex-direction: column;
-}
-
-.cam{
-    display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-wrap: wrap;
 }
 
-.cam{
-    margin-top: 2rem;
-    padding: 3rem;
-    border: 2px solid purple;
-    border-radius: 25px;
-    background-color: #F3E9F1;
+.test{
+    width: 20%;
 }
 
-.cam img{
-    height: 450px;
-    width: 600px;
+.texter{
+    color: blue;
 }
 
 footer{

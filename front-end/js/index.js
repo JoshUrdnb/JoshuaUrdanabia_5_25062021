@@ -1,32 +1,39 @@
-const getCameras =  async function() {
+main()
 
-    try {
-        let response = await fetch('http://localhost:3000/api/cameras')
-        if (response.ok) {
-            let cameras = await response.json()
-            console.log(cameras)
-
-            for (let cam of cameras) {
-                const camerasDiv = document.getElementById('cameras');
-        
-                const camerasSection = document.createElement('section');
-                camerasDiv.appendChild(camerasSection);
-                camerasSection.className = 'cam';
-
-                const link = document.createElement("a");
-                link.href = "product.html?id=" + cam._id;
-                camerasSection.appendChild(link);
-        
-                const camImg = document.createElement('img');
-                link.appendChild(camImg);
-                camImg.setAttribute('src', cam.imageUrl);
-            }
-        } else {
-            console.error('Retour du serveur : ', response.status)
-        } 
-    } catch (e) {
-        console.log(e)
+// ASYNC permet l'utilisation de await, va attendre la reponse avant de s'executer
+async function main() {
+    // Création de la variable avec les donnés de l'API
+    const articles = await getArticles()
+    // Fonction qui va permettre d'afficher les articles
+    for (article of articles) {
+        displayArticles(article) 
     }
 }
 
-getCameras();
+function getArticles() {
+    // Connexion à l'API
+    return fetch("http://localhost:3000/api/cameras")
+    // Fonction qui récupère les données JSON de l'API
+    .then(function(response){
+        return response.json()
+    })
+    // Récupère la valeur de response.json en variable articles
+    .then(function(articles){
+        return articles
+    })
+    // Crée une alerter dans le navigateur si il y à une erreur
+    .catch(function(error){
+        alert(error)
+    })
+}
+
+// Créera mon article qui se trouve dans la boucle for de main
+function displayArticles(article) {
+    // Console.log me permet de vérifier la console du navigateur
+    console.log(article);
+    // IMAGE
+    document.getElementById("main").innerHTML += `<img class="test" id="img" src="${article.imageUrl}"/>`
+    document.getElementById("main").innerHTML += `<div class="texter" id="text">${article.name}</div>`
+    document.getElementById("main").innerHTML += `<div id="text">${article.description}</div>`
+    document.getElementById("main").innerHTML += `<div id="text">${article.price}</div>`
+}
