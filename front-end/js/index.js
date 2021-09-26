@@ -1,3 +1,4 @@
+/*
 main()
 
 // ASYNC permet l'utilisation de await, va attendre la reponse avant de s'executer
@@ -37,3 +38,14 @@ function displayArticles(article) {
     document.getElementById("main").innerHTML += `<div id="text">${article.description}</div>`
     document.getElementById("main").innerHTML += `<div id="text">${article.price}</div>`
 }
+
+*/
+
+const main = () => {
+    request('http://localhost:3000/api/cameras');
+}
+
+main();
+
+
+
