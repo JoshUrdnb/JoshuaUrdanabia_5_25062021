@@ -67,3 +67,23 @@ footer{
     justify-content: center;
     padding: 2rem;
 }
+
+
+.title-element{
+    margin-top: 50px;
+}
+
+.order-btn {
+    margin: 15px auto auto auto;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.center-form{
+    width: 70%;
+    margin: 50px auto 50px auto;
+    padding: 5rem;
+    border-radius: 1rem;
+}
