@@ -87,3 +87,10 @@ footer{
     padding: 5rem;
     border-radius: 1rem;
 }
+
+.confirm {
+    background-color: #f3e9f1;
+    margin: 2%;
+    padding: 2%;
+    border-radius: 1rem;
+}
