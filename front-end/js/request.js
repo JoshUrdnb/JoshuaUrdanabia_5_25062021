@@ -1,3 +1,4 @@
-const request = (url) => {
-    fetch(url);
+const dataApi = async (url) => {
+    const response = await fetch(url);
+    return await response.json();
 }

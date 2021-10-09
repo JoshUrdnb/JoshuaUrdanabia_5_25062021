@@ -42,7 +42,12 @@ function displayArticles(article) {
 */
 
 const main = () => {
-    request('http://localhost:3000/api/cameras');
+    const cameras = dataApi('http://localhost:3000/api/cameras');
+    cameras.then((toutesCameras) => {
+        toutesCameras.forEach((camera) => {
+            afficherCartesCamera(camera);
+        });
+    })
 }
 
 main();
