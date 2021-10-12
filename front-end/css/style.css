@@ -47,14 +47,6 @@ main{
     flex-wrap: wrap;
 }
 
-.test{
-    width: 20%;
-}
-
-.texter{
-    color: blue;
-}
-
 footer{
     margin: auto;
     height: auto;
@@ -93,4 +85,27 @@ footer{
     margin: 2%;
     padding: 2%;
     border-radius: 1rem;
+}
+
+/* Cameras Card */
+
+.camArticle{
+    width: 30%;
+    border: 3px solid black;
+}
+
+.camImg{
+    width: 20%;
+}
+
+.camName{
+    font-weight: bold;
+}
+
+.camDescription{
+    font-style: italic;
+}
+
+.camPrice{
+    font-weight: 700;
 }
