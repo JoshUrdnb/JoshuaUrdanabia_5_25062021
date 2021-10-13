@@ -90,12 +90,17 @@ footer{
 /* Cameras Card */
 
 .camArticle{
-    width: 30%;
-    border: 3px solid black;
+    width: 550px;
+    border-radius: 3rem;
+    background-color: #F3E9F1;
+    margin-bottom: 3rem;
+    padding: 1rem;
 }
 
 .camImg{
-    width: 20%;
+    width: 550px;
+    margin: auto;
+    border-radius: 3rem;
 }
 
 .camName{
