@@ -7,20 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Details du produit | Orinoco</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="../favicon.ico">
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
 </head>
 
 <body>
-    <header class="bgc-element bgc-sizing">
-        <nav>
-            <a href="index.html" class="indexLogo"><img src="../img/orinoco.png" alt="Orinoco Accueil"
-                    title="Accueil d'Orinoco" class="img-sizing" /></a>
-            <button class="btn-sizing"><a href="cart.html" class="cartLink" title="Votre Panier">Panier</a></button>
+    <header class="header">
+        <a class="logo" href="../index.html"><img src="../img/orinocam.png" alt="Orinoco Logo"></a>
+        <h1 class="mainTitle">OrinoCam</h1>
+        <nav class="navBar">
+            <a class="navLinks" href="index.html">Accueil</a>
+            <a class="navLinks" href="cart.html">Votre Panier</a>
         </nav>
     </header>
 
     <main>
-        <h1 class="title-element">Details de l'appareil photo</h1>
+        <article class="camArticle">
+            <img class="camImg" src="${camera.imageUrl}">
+                <div class="cardContent">
+                    <h3 class="camName">${camera.name}</h3>
+                    <p class="camDescription">${camera.description}</p>
+                    <p class="camPrice">${camera.price}</p>
+                    <a href="html/confirmation.html" class="productBtn">Plus d'infos</a>
+                </div>
+        </article>
     </main>
 
     <footer class="bgc-element bgc-sizing">
