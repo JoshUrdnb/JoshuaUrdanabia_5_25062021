@@ -2,40 +2,40 @@
 
 @font-face {
     font-family: 'Fanwood';
-    src: url('../fonts/Fanwood.otf') format("truetype");
+    src        : url('../fonts/Fanwood.otf') format("opentype");
 }
 
 * {
-    margin: 0;
-    padding: 0;
+    margin     : 0;
+    padding    : 0;
     font-family: 'Poppins', sans-serif;
 }
 
-body{
-    width: 100%;
+body {
+    width     : 100%;
     box-sizing: border-box;
-    background: #333;
+    background: #F4F6F7;
 }
 
-nav{
-    display: flex;
+nav {
+    display        : flex;
     justify-content: space-between;
-    padding: 2rem;
+    padding        : 2rem;
 }
 
-a{
+a {
     text-decoration: none;
-    color: #333;
+    color          : #333;
 }
 
-main{
+main {
     min-height: 100vh;
 }
 
-footer{
-    margin: auto;
-    height: auto;
-    bottom: 0;
+footer {
+    margin    : auto;
+    height    : auto;
+    bottom    : 0;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
@@ -45,11 +45,11 @@ footer{
 /*HEADER*/
 
 .header {
-    display: grid;
+    display              : grid;
     grid-template-columns: auto 1fr auto;
-    grid-template-areas: "logo h1 nav";
-    align-items: center;
-    padding: 5em;
+    grid-template-areas  : "logo h1 nav";
+    align-items          : center;
+    padding              : 5em;
 }
 
 .logo {
@@ -61,34 +61,36 @@ footer{
 }
 
 .header h1 {
-    grid-area: h1;
-    display: flex;
-    align-items: center;
+    grid-area      : h1;
+    display        : flex;
+    align-items    : center;
     justify-content: center;
-    font-family: 'Fanwood';
-    font-size: 10em;
-    color: #FFF;
-    text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-family    : 'Fanwood';
+    font-size      : 10em;
+    color          : #FFF;
+    text-shadow    : rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .navLinks {
-    display: inline-block;
-    color: #333;
-    font-weight: 400;
-    margin-left: 4rem;
-    padding: 1rem;
-    background-color: #3F9A59;
+    display      : inline-block;
+    color        : #333;
+    font-weight  : 400;
+    margin-left  : 4rem;
+    padding      : 1rem;
+    background   : rgb(230, 138, 8);
+    background   : linear-gradient(90deg, rgba(230, 138, 8, 1) 0%, rgba(143, 91, 254, 1) 100%);
     border-radius: 2.8rem;
-    color: #FFF;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    
+    color        : #FFF;
+    box-shadow   : rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
 }
 
 .navLinks:hover {
-    padding: 1rem;
-    background-color: #017143;
+    padding      : 1rem;
     border-radius: 2.8rem;
-    color: #FFF;
+    color        : #FFF;
+    transition   : transform .2s;
+    transform    : scale(1.1)
 }
 
 /*HEADER*/
@@ -97,118 +99,182 @@ footer{
 /* CARD*/
 
 .mainContent {
-    padding: 10em 20em 10em 20em;
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr; 
-    gap: 5em 5em; 
-    grid-template-areas: 
-    ". . ."
-    ". . ."; 
+    padding              : 8em 20em 20em 20em;
+    display              : grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows   : 1fr 1fr;
+    gap                  : 5em 5em;
+    grid-template-areas  :
+        ". . ."
+        ". . .";
 }
 
 .camArticle {
-    width: 100%;
-    height: 100%;
+    position     : relative;
+    width        : 100%;
+    height       : 100%;
     border-radius: 3rem;
-    background-color: #3F9A59;
+    background   : rgb(230, 138, 8);
+    background   : linear-gradient(90deg, rgba(230, 138, 8, 1) 0%, rgba(143, 91, 254, 1) 100%);
     margin-bottom: 3rem;
-    padding: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding      : 1rem;
+    box-shadow   : rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.camArticle:hover {
-    transition: transform .2s;
-    transform: scale(1.1)
+.cardContent {
+    padding: 2em;
 }
 
 .camImg {
-    width: 100%;
-    height: 60%;
-    margin: auto;
+    width        : 100%;
+    height       : 60%;
+    margin       : auto;
     border-radius: 3rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow   : rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .camName {
     font-weight: bold;
+    color      : #333;
 }
 
 .camDescription {
     font-style: italic;
+    color     : #333;
 }
 
 .camPrice {
-    font-weight: 700;
+    position        : absolute;
+    margin          : 1em 0 0 1em;
+    font-weight     : 700;
+    display         : inline-block;
+    padding         : 1rem;
+    background: rgb(143,91,254);
+    background: linear-gradient(90deg, rgba(143,91,254,1) 0%, rgba(230,138,8,1) 100%);
+    border-radius   : 1em;
+    color           : #FFF;
+    box-shadow      : rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .productBtn {
-display: inline-block;
-color: #333;
-font-weight: 400;
-margin-left: 4rem;
-padding: 1rem;
-background-color: #333;
-border-radius: 2.8rem;
-color: #FFF;
-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position        : absolute;
+    margin          : 1em 0 0 1em;
+    display         : inline-block;
+    color           : #333;
+    font-weight     : 400;
+    margin-left     : 25em;
+    padding         : 1rem;
+    background-color: #333;
+    border-radius   : 2.8rem;
+    color           : #FFF;
+    box-shadow      : rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.productBtn:hover {
+    transition: transform .2s;
+    transform : scale(1.1)
 }
 
 /* CARD*/
 
 
+/* PRODUCTS */
 
-.img-sizing{
-    height: 5rem;
-}
-
-.btn-sizing{
-    height: 5rem;
-    width: 8rem;
-}
-
-.bgc-element{
-    background-color: #3F9A59;
-}
-
-.bgc-sizing{
-    height: 150px;
-    width: 100%;
-}
-
-.copyright{
-    display: flex;
+.mainProducts {
+    display        : flex;
     justify-content: center;
-    padding: 2rem;
+    align-items    : center;
 }
+
+
+.camDetails {
+    position     : relative;
+    width        : 60em;
+    height       : 65em;
+    border-radius: 3rem;
+    background   : rgb(230, 138, 8);
+    background   : linear-gradient(90deg, rgba(230, 138, 8, 1) 0%, rgba(143, 91, 254, 1) 100%);
+    margin-bottom: 3rem;
+    padding      : 1rem;
+    box-shadow   : rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.orderBtn {
+    position        : absolute;
+    margin          : 1em 0 0 1em;
+    display         : inline-block;
+    color           : #333;
+    font-weight     : 400;
+    margin-left     : 25em;
+    padding         : 1rem;
+    background-color: #333;
+    border-radius   : 2.8rem;
+    color           : #FFF;
+    box-shadow      : rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.orderBtn:hover {
+    transition: transform .2s;
+    transform : scale(1.1)
+}
+
+/* PRODUCTS */
 
 
 /* FORM */
 
-.title-element{
-    margin-top: 50px;
-}
-
 .order-btn {
-    margin: 15px auto auto auto;
-    padding: 15px;
+    margin       : 15px auto auto auto;
+    padding      : 15px;
     border-radius: 10px;
-    text-align: center;
-    cursor: pointer;
+    text-align   : center;
+    cursor       : pointer;
 }
 
-.center-form{
-    width: 70%;
-    margin: 50px auto 50px auto;
-    padding: 5rem;
+.center-form {
+    width        : 70%;
+    margin       : 50px auto 50px auto;
+    padding      : 5rem;
     border-radius: 1rem;
 }
 
 .confirm {
-    background-color: #f3e9f1;
-    margin: 2%;
-    padding: 2%;
+    background   : rgb(230, 138, 8);
+    background   : linear-gradient(90deg, rgba(230, 138, 8, 1) 0%, rgba(143, 91, 254, 1) 100%);
+    margin       : 2%;
+    padding      : 2%;
     border-radius: 1rem;
 }
 
 /* FORM */
+
+
+
+
+/*******/
+.img-sizing {
+    height: 5rem;
+}
+
+.btn-sizing {
+    height: 5rem;
+    width : 8rem;
+}
+
+.bgc-element {
+    background: rgb(230, 138, 8);
+    background: linear-gradient(90deg, rgba(230, 138, 8, 1) 0%, rgba(143, 91, 254, 1) 100%);
+}
+
+.bgc-sizing {
+    height: 150px;
+    width : 100%;
+}
+
+.copyright {
+    display        : flex;
+    justify-content: center;
+    padding        : 2rem;
+}
+
+/*******/
