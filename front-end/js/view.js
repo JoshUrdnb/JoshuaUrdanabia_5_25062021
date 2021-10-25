@@ -8,8 +8,8 @@ const afficherCartesCamera = (camera) => {
                     <h3 class="camName">${camera.name}</h3>
                     <p class="camDescription">${camera.description}</p>
                 </div>
-            <span class="camPrice">${camera.price}</span>
-            <a href="html/products.html" class="productBtn">Détails du produit</a>
+            <span class="camPrice">${formatToCurrency(camera.price, 'EUR', 'fr-FR')}</span>
+            <a href="html/products.html?id=${camera._id}" class="productBtn">Détails du produit</a>
         </article>
     `
 }
