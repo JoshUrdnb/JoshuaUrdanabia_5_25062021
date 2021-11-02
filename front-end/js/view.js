@@ -27,13 +27,14 @@ const afficherProduct = (camera) => {
                 <p class="camDescription">${camera.description}</p>
             </div>
 
-            <form class="formLenses" >
+            <form method="get" class="formLenses">
                 <label for="lensesSelect">Votre configuration</label>
 
                     <select name="lenses" id="lensesSelect">
                         <option value="lense0">---</option>
-                        <option value="lense1">5mm 1.4</option>
-                        <option value="lense2">50mm 1.6</option>
+                        <option value="lense1"${camera.lenses}</option>
+                        <option value="lense2">${camera.lenses}</option>
+                        <option value="lense2">${camera.lenses}</option>
                     </select>
             </form>
 
@@ -42,4 +43,9 @@ const afficherProduct = (camera) => {
             </main>
     </article>
 `
+}
+
+// Choix de la lentille
+const showLense = () => {
+    
 }
