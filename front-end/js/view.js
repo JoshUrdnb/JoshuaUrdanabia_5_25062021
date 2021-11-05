@@ -17,35 +17,32 @@ const afficherCartesCamera = (camera) => {
 
 // Afficher l'appareil photo selectionne :
 const afficherProduct = (camera) => {
+    let options='';
+    camera.lenses.forEach((lenses) => {
+    options +=`<option value="${lenses}">${lenses}</option>`;    
+});
     document.getElementById('products').innerHTML += `
      <article class="camDetails">
 
-        <img class="camImg" src="${camera.imageUrl}">
+        <img class="camImg" src="${camera.imageUrl}"</>
 
             <div class="cardContent">
                 <h3 class="camName">${camera.name}</h3>
                 <p class="camDescription">${camera.description}</p>
             </div>
 
-            <form method="get" class="formLenses">
+            <form method="get" class="formLenses" id="formLenses">
                 <label for="lensesSelect">Votre configuration</label>
 
-                    <select name="lenses" id="lensesSelect">
-                        <option value="lense0">---</option>
-                        <option value="lense1"${camera.lenses}</option>
-                        <option value="lense2">${camera.lenses}</option>
-                        <option value="lense2">${camera.lenses}</option>
+                    <select id="lensesSelect" name="lensesSelect">
+                        <option disabled hidden selected>-- Disponibilités --</option>
+                        ${options}
                     </select>
             </form>
 
             <div class="camPrice">${formatToCurrency(camera.price, 'EUR', 'fr-FR')}</div>
-                <a href="cart.html" class="orderBtn">Ajouter au panier</a>
-            </main>
+            
+            <input id="send" class="orderBtn" type="submit" name="send" value="Ajouter au panier"></>
     </article>
 `
-}
-
-// Choix de la lentille
-const showLense = () => {
-    
 }
