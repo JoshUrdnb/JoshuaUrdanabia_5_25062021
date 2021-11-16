@@ -316,3 +316,11 @@ select {
     color           : #F4F6F7;
     background-color: #333;
 }
+
+.nullDetail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-size: larger;
+}
