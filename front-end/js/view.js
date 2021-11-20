@@ -31,7 +31,7 @@ const afficherProduct = (camera) => {
                 <p class="camDescription">${camera.description}</p>
             </div>
 
-            <form method="get" class="formLenses" id="formLenses">
+            <form class="formLenses" id="formLenses">
                 <label for="lensesSelect">Votre configuration</label>
 
                     <select id="lensesSelect" name="lensesSelect">
@@ -45,4 +45,11 @@ const afficherProduct = (camera) => {
             <input id="send" class="orderBtn" type="submit" name="send" value="Ajouter au panier"></>
     </article>
 `
+}
+
+const afficherErreur = (message) => {
+    document.getElementById("products").innerHTML = `
+    <article class="camDetails">
+    <p class="nullDetail">${message}</p>
+    </article> `
 }
