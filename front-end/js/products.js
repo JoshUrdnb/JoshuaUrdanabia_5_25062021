@@ -5,17 +5,16 @@ const products = () => {
     const getProduct = dataApi(`http://localhost:3000/api/cameras/${productId}`);
     //const getProduct2 = data('http://localhost:3000/api/cameras/' + productId);
     getProduct.then((product) => {
-
-            afficherProduct(product) = true;
-            
-            if (product === null) {
-                afficherErreur("La page demandée n'existe pas.");
-            }
-        
-            if (product.length !== 24) {
-                afficherErreur("Le produit n'existe pas.");
-            }
+        console.log(product);
+        localStorage.setItem('toto', 'Salut, toto');
+        console.log(localStorage.getItem('toto'));
+        if (product !== null) {
+            afficherProduct(product);
+        } else if (product === null) {
+            afficherErreur("Le produit n'existe pas.");
+        }
     })
 }
+
 
 products();
