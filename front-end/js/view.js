@@ -42,7 +42,7 @@ const afficherProduct = (camera) => {
 
             <div class="camPrice">${formatToCurrency(camera.price, 'EUR', 'fr-FR')}</div>
             
-            <input id="send" class="orderBtn" type="submit" name="send" value="Ajouter au panier"></>
+            <a href="cart.html" class="orderBtn">Ajouter au panier</a>
     </article>
 `
 }
