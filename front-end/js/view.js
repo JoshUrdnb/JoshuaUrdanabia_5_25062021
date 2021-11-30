@@ -17,10 +17,10 @@ const afficherCartesCamera = (camera) => {
 
 // Afficher l'appareil photo selectionne :
 const afficherProduct = (camera) => {
-    let options='';
+    let options = '';
     camera.lenses.forEach((lenses) => {
-    options +=`<option value="${lenses}">${lenses}</option>`;    
-});
+        options += `<option value="${lenses}">${lenses}</option>`;
+    });
     document.getElementById('products').innerHTML += `
      <article class="camDetails">
 
@@ -47,6 +47,7 @@ const afficherProduct = (camera) => {
 `
 }
 
+// Afficher message d'erreur :
 const afficherErreur = (message) => {
     document.getElementById("products").innerHTML = `
     <article class="camDetails">
