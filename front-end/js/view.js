@@ -42,9 +42,17 @@ const afficherProduct = (camera) => {
 
             <div class="camPrice">${formatToCurrency(camera.price, 'EUR', 'fr-FR')}</div>
             
-            <a href="cart.html" class="orderBtn">Ajouter au panier</a>
-    </article>
-`
+            <a href="cart.html" class="orderBtn" id="ajouter">Ajouter au panier</a>
+    </article> `;
+    document.getElementById('ajouter').addEventListener('click', (event) => {
+        event.preventDefault();
+        //console.log(camera); 
+        let panier = JSON.parse(localStorage.getItem('panier')) || [];
+        panier.push(camera);
+        localStorage.setItem('panier',JSON.stringify(panier));
+        console.log(panier);
+        
+    })
 }
 
 // Afficher message d'erreur :
