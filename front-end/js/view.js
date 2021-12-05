@@ -56,39 +56,17 @@ const afficherProduct = (camera) => {
 
 // Recuperer les valeurs :
 const afficherLigneDuPanier = (produit) => {
-    console.log(produit);/*
-   document.getElementById('panier').innerHTML += `
-                                <table class="cart_list">
-
-                                    <td class="cart_item_image"><img src="http://localhost:3000/images/vcam_2.jpg"
-                                            alt=""></td>
-
-                                    <tr class="cart_item_name cart_info_col">
-                                        <th class="cart_item_title">Nom</th>
-                                        <td class="cart_item_text" id="productName">Hirsch 400DTS</td>
-                                    </tr>
-
-                                    <tr class="cart_item_color cart_info_col">
-                                        <th class="cart_item_title">Lentille</th>
-                                        <td class="cart_item_text">24-60mm 2.8/4.5</td>
-                                    </tr>
-
-                                    <tr class="cart_item_quantity cart_info_col">
-                                        <th class="cart_item_title">Quantité</th>
-                                        <td class="cart_item_text">1</td>
-                                    </tr>
-
-                                    <tr class="cart_item_price cart_info_col">
-                                        <th class="cart_item_title">Prix</th>
-                                        <td class="cart_item_text" id="productPrice">3099,00€</td>
-                                    </tr>
-
-                                    <tr class="cart_item_total cart_info_col">
-                                        <th class="cart_item_title">Total</th>
-                                        <td class="cart_item_text">3099,00€</td>
-                                    </tr>
-
-                                </table>`;*/
+    console.log(produit);
+   document.getElementById('tableId').innerHTML += `
+                <tbody>
+                    <tr>
+                        <td class="cart_item_image"><img src="${produit.imageUrl}" alt=""></td>
+                        <td>${produit.name}</td>
+                        <td>---</td>
+                        <td>1</td>
+                        <td>${formatToCurrency(produit.price, 'EUR', 'fr-FR')}</td>
+                    </tr>
+                </tbody>`;
         
 }
 
