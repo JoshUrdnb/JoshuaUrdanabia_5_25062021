@@ -56,42 +56,45 @@ const afficherProduct = (camera) => {
 
 // Recuperer les valeurs :
 const afficherLigneDuPanier = (produit) => {
-    console.log(produit);
+    console.log(produit);/*
+   document.getElementById('panier').innerHTML += `
+                                <table class="cart_list">
+
+                                    <td class="cart_item_image"><img src="http://localhost:3000/images/vcam_2.jpg"
+                                            alt=""></td>
+
+                                    <tr class="cart_item_name cart_info_col">
+                                        <th class="cart_item_title">Nom</th>
+                                        <td class="cart_item_text" id="productName">Hirsch 400DTS</td>
+                                    </tr>
+
+                                    <tr class="cart_item_color cart_info_col">
+                                        <th class="cart_item_title">Lentille</th>
+                                        <td class="cart_item_text">24-60mm 2.8/4.5</td>
+                                    </tr>
+
+                                    <tr class="cart_item_quantity cart_info_col">
+                                        <th class="cart_item_title">Quantité</th>
+                                        <td class="cart_item_text">1</td>
+                                    </tr>
+
+                                    <tr class="cart_item_price cart_info_col">
+                                        <th class="cart_item_title">Prix</th>
+                                        <td class="cart_item_text" id="productPrice">3099,00€</td>
+                                    </tr>
+
+                                    <tr class="cart_item_total cart_info_col">
+                                        <th class="cart_item_title">Total</th>
+                                        <td class="cart_item_text">3099,00€</td>
+                                    </tr>
+
+                                </table>`;*/
+        
 }
 
-/*const updatePanier = () => {
-    if(panier.lenght > 0) {
-        document.getElementById('panierId').innerHTML += `
-            <ul id="cart_list">
-                <li class="cart_item clearfix bgc-element">
-                    <div class="cart_item_image"><img src="${camera.imageUrl}" alt=""></div>
-                    <div
-                        class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
-                        <div class="cart_item_name cart_info_col">
-                            <div class="cart_item_title">Nom</div>
-                            <div class="cart_item_text" id="productName">${camera.name}</div>
-                        </div>
-                        <div class="cart_item_color cart_info_col">
-                            <div class="cart_item_title">Lentille</div>
-                            <div class="cart_item_text">24-60mm 2.8/4.5</div>
-                        </div>
-                        <div class="cart_item_quantity cart_info_col">
-                            <div class="cart_item_title">Quantité</div>
-                            <div class="cart_item_text">1</div>
-                        </div>
-                        <div class="cart_item_price cart_info_col">
-                            <div class="cart_item_title">Prix</div>
-                            <div class="cart_item_text" id="productPrice">${formatToCurrency(camera.price, 'EUR', 'fr-FR')}</div>
-                        </div>
-                        <div class="cart_item_total cart_info_col">
-                            <div class="cart_item_title">Total</div>
-                            <div class="cart_item_text">3099,00€</div>
-                        </div>
-                    </div>
-                </li>
-            </ul> `;
-    };
-}*/
+/*
+    if(panier.lenght > 0) { };
+*/
 
 // Afficher message d'erreur :
 const afficherErreur = (message) => {
