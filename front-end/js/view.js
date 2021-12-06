@@ -57,22 +57,26 @@ const afficherProduct = (camera) => {
 // Recuperer les valeurs :
 const afficherLigneDuPanier = (produit) => {
     console.log(produit);
-   document.getElementById('tableId').innerHTML += `
-                <tbody>
-                    <tr>
-                        <td class="cart_item_image"><img src="${produit.imageUrl}" alt=""></td>
-                        <td>${produit.name}</td>
-                        <td>---</td>
-                        <td>1</td>
-                        <td>${formatToCurrency(produit.price, 'EUR', 'fr-FR')}</td>
-                    </tr>
-                </tbody>`;
-        
+    document.getElementById('tableId').innerHTML += `
+        <tbody>
+            <tr>
+                <td class="cart_item_image"><img src="${produit.imageUrl}" alt=""></td>
+                <td>${produit.name}</td>
+                <td>---</td>
+                <td>1</td>
+                <td>${formatToCurrency(produit.price, 'EUR', 'fr-FR')}</td>
+            </tr>
+        </tbody>`;
+
 }
 
-/*
-    if(panier.lenght > 0) { };
-*/
+//Afficher le panier est vide :
+const afficherPanierVide = (panierVide) => {
+    //console.log(panierVide);
+    document.getElementById("tableId").innerHTML = `
+            <p>${panierVide}</p>
+    `;
+}
 
 // Afficher message d'erreur :
 const afficherErreur = (message) => {
