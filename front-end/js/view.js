@@ -58,15 +58,13 @@ const afficherProduct = (camera) => {
 const afficherLigneDuPanier = (produit) => {
     console.log(produit);
     document.getElementById('tableId').innerHTML += `
-        <tbody>
             <tr>
                 <td class="cart_item_image"><img src="${produit.imageUrl}" alt=""></td>
                 <td>${produit.name}</td>
                 <td>---</td>
                 <td>1</td>
                 <td>${formatToCurrency(produit.price, 'EUR', 'fr-FR')}</td>
-            </tr>
-        </tbody>`;
+            </tr>`;
 
 }
 
