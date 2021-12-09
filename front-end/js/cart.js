@@ -1,14 +1,23 @@
 const main = () => {
     // Recuperer les donnees du panier :
     let panier = JSON.parse(localStorage.getItem('panier')) || [];
-    // Afficher les produits du panier :
-    panier.forEach((produit) => {
-        if (produit !== null) {
+    if (panier.length === 0) {
+        console.log('panier vide');
+        afficherPanierVide("Le panier est vide");
+    } else if (panier.length !== 0) {
+        // Afficher les produits du panier :
+        panier.forEach((produit) => {
+            console.log('panier plein');
             afficherLigneDuPanier(produit);
-        } else if (produit === null) {
-            afficherPanierVide("Le panier est vide");
-        }
-    });
+        });
+    }
 }
 
 main();
+
+
+/*
+        if (produit !== null) {
+            afficherPanierVide("Le panier est vide");
+        }
+*/
